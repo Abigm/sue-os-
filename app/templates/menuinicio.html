@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</head>
+<body>
+    <h1>Bienvenido, {{ current_user.username }}!</h1>
+    <ul>
+        <li><a href="{{ url_for('main.escribir_sueno') }}">Escribir Sueño</a></li>
+        <li><a href="{{ url_for('main.registrar_horas_sueno') }}">Registrar Horas de Sueño</a></li>
+        <li><a href="{{ url_for('main.evaluacion_calidad_sueno') }}">Evaluación de Calidad de Sueño</a></li>
+    </ul>
+</body>
+</html>

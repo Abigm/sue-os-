@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi diario de sueños</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}"><link>
+    <script src="{{ url_for('static', filename='/js/script.js') }}"defer></script>
+</head>
+<body>
+    <h1>Bienvenido a tu Diario de Sueños</h1>
+    <h2>¡Explora tus sueños y dales vida!</h2>
+
+    
+    <div class="options-container">
+        <button onclick="mostrarFormulario('loginForm')">Iniciar Sesión</button>
+        <button onclick="mostrarFormulario('registroForm')">Registrarse</button>
+    </div>
+
+    <div id="loginFormContainer" class="form-container">
+        <h3>Iniciar Sesión</h3>
+        <form id="loginForm">
+            <label for="usernameLogin">Nombre de Usuario:</label>
+            <input type="text" id="usernameLogin" name="usernameLogin" required>
+            
+            <label for="passwordLogin">Contraseña:</label>
+            <input type="password" id="passwordLogin" name="passwordLogin" minlength="8" required>
+            
+            <button type="button" onclick="login()">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div id="registroFormContainer" class="form-container">
+        <h3>Registrarse</h3>
+        <form id="registroForm">
+            <label for="usernameRegistro">Nombre de Usuario:</label>
+            <input type="text" id="usernameRegistro" name="usernameRegistro" required>
+            
+            <label for="passwordRegistro">Contraseña:</label>
+            <input type="password" id="passwordRegistro" name="passwordRegistro" minlength="8" required>
+            
+            <button type="button" onclick="registrarUsuario()">Registrarse</button>
+        </form>
+    </div>
+
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+    
+</html>
